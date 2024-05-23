@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Settings">
+
+    <EditText
+        android:id="@+id/editTextSOS"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="290dp"
+        android:layout_marginRight="10dp"
+        android:ems="10"
+        android:fontFamily="sans-serif-smallcaps"
+        android:hint="SOS Message"
+        android:inputType="text"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/textViewMessage1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="220dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Enter your personalized SOS message"
+        android:textAlignment="center"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/textViewMessage2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="250dp"
+        android:layout_marginRight="10dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="WARNING, do not write inappropriate things"
+        android:textAlignment="center"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/Sendsms"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="350dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/btn1"
+        android:elevation="20dp"
+        android:fontFamily="sans-serif-black"
+        android:padding="10dp"
+        android:text="Send"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/textViewCoordinate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="100dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="YOUR COORDINATES"
+        android:textAlignment="center"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/textViewCoordinate2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="130dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="TextView"
+        android:textAlignment="center"
+        android:textColor="#000000" />
+
+    <TextView
+        android:id="@+id/textViewTitleName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="I NEED YOUR HELP"
+        android:textAlignment="textEnd"
+        android:textAllCaps="false"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold|italic" />
+</FrameLayout>

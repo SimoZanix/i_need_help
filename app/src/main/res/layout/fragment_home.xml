@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Home">
+
+    <ListView
+        android:id="@+id/list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="70dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginBottom="100dp"
+        android:choiceMode="multipleChoice" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="0dp"
+        android:fontFamily="sans-serif-black"
+        android:shadowColor="#D8D8D8"
+        android:text="CONTACTS"
+        android:textAlignment="center"
+        android:textColor="#000000"
+        android:textSize="34sp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="200dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/btn2"
+        android:elevation="20dp"
+        android:fontFamily="sans-serif-black"
+        android:padding="10dp"
+        android:shadowColor="#000000"
+        android:text="SEND"
+        android:textColor="#000000" />
+
+    <Button
+        android:id="@+id/buttonDelateContact"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="200dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/btn2"
+        android:elevation="20dp"
+        android:fontFamily="sans-serif-black"
+        android:padding="10dp"
+        android:text="Delete contact"
+        android:textColor="#000000" />
+
+</FrameLayout>
