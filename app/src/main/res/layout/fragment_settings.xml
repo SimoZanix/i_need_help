@@ -93,3 +93,4 @@
         android:textSize="20sp"
         android:textStyle="bold|italic" />
 </FrameLayout>
+    <!--FILE XML PER IL SETTINGS FRAGMENT-->
