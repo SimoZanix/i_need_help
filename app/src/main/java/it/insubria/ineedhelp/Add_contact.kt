@@ -36,7 +36,7 @@ class Add_contact : Fragment() {
         }
     }
 
-    private fun mostraDialogoConfermaEliminazione() {
+    private fun mostraDialogoConfermaEliminazione() {//messaggio di conferma per quando si vuole eliminare tutti i contatti
         val db = MyDbHelper(requireContext())
         val builder = AlertDialog.Builder(requireContext())
         builder.setTitle("Confirm Elimination")
@@ -54,7 +54,7 @@ class Add_contact : Fragment() {
 
 
     @SuppressLint("MissingInflatedId")
-    override fun onCreateView(
+    override fun onCreateView(//aggiunta di contatti con dovuti controlli nel inserimento del nome e numero di cellulare, i contatti aggiunti vanno a finire in un database locale
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
