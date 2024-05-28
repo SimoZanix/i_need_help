@@ -16,7 +16,7 @@ var COL_MESSAGGIO = "messaggio"
 var COL_LONGITUDE = "longitude"
 var COL_LATITUDE = "latitude"
 class MyDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASENAME, null, DBVERSION) {
-    override fun onCreate(db: SQLiteDatabase?) {
+    override fun onCreate(db: SQLiteDatabase?) {//creazione del database con 3 tabelle contatti-message-coordinate con i loro vari campi
         db?.execSQL("CREATE TABLE IF NOT EXISTS " + TABLE_NAME_CONTACTS + "(" +
                 COL_ID + " INTEGER PRIMARY KEY AUTOINCREMENT," +
                 COL_NAME + " TEXT," +
@@ -35,7 +35,7 @@ class MyDbHelper(context: Context) : SQLiteOpenHelper(context, DATABASENAME, nul
                 ")")
     }
 
-    override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {
+    override fun onUpgrade(db: SQLiteDatabase?, oldVersion: Int, newVersion: Int) {//update del database nel caso si cambi versione
         db?.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME_CONTACTS)
         db?.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME_MESSAGE)
         db?.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME_COORDINATE)
