@@ -70,7 +70,7 @@ class Home : Fragment() {
 
     }
 
-    override fun onPause() {
+    override fun onPause() {//onPause quando il fragment cambia e non è piu quello della home si attiva questa funzione dove interrompe il thread
         super.onPause()
 
         ThreadSMS.interrupt()
@@ -79,7 +79,7 @@ class Home : Fragment() {
 
 
     @SuppressLint("MissingInflatedId")
-    override fun onCreateView(
+    override fun onCreateView(// creazione del adapter per la listview dove verranno messi tutti i contatti presi da un database locale e due bottoni dove manda i messaggi agli utenti selezionati oppure elimina il contatto
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
@@ -163,7 +163,7 @@ class Home : Fragment() {
         return view
     }
 
-    private fun mostraDialogoConfermaEliminazione() {
+    private fun mostraDialogoConfermaEliminazione() {//mostra avviso per eliminazione del contatto
         val db = MyDbHelper(requireContext())
         val builder = AlertDialog.Builder(requireContext())
         builder.setTitle("Confirm Elimination")
@@ -178,7 +178,7 @@ class Home : Fragment() {
             .show()
     }
 
-    private fun mostraDialogoAvvisoInvioMessaggio() {
+    private fun mostraDialogoAvvisoInvioMessaggio() {//mostra avviso di stare nel fragment home mentre manda i messaggi
         val builder = AlertDialog.Builder(context)
         builder.setMessage("To ensure that messages are sent correctly you must stay in the \"HOME\" section and not change")
             .setPositiveButton("OK") { dialog, _ ->
@@ -189,7 +189,7 @@ class Home : Fragment() {
     }
 
 
-    fun sendSMS() {
+    private fun sendSMS() {//funzione per mandare i messaggi agli utenti selezionati
         val db = MyDbHelper(requireContext())
         var message = ""
         if (elementiEstratti.isEmpty()){
