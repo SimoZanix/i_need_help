@@ -28,7 +28,7 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         replaceFragment(Home())
-        binding.bottomNavigationView.setOnItemSelectedListener {
+        binding.bottomNavigationView.setOnItemSelectedListener {//selezione/rimpiazzo del fragment selezionato dall'utente
             when(it.itemId){
                 R.id.home ->{
                     replaceFragment(Home())
@@ -52,14 +52,14 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun replaceFragment(fragment: Fragment){
+    private fun replaceFragment(fragment: Fragment){//funzione di rimpiazzo del fragment
         val fragmentManager = supportFragmentManager
         val fragmentTransaction = fragmentManager.beginTransaction()
         fragmentTransaction.replace(R.id.frame_layout,fragment)
         fragmentTransaction.commit()
     }
 
-    private fun getLocationUpdate(){
+    private fun getLocationUpdate(){ //funzione che aggiorna la posizione del dispositivo in un determinato intervallo di tempo indipendentemente dal fragment selezionato
         if(ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, android.Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED){
             ActivityCompat.requestPermissions(this, arrayOf(android.Manifest.permission.ACCESS_FINE_LOCATION), 100)
             return
@@ -108,4 +108,4 @@ class MainActivity : AppCompatActivity() {
 
 
 
-}
+}}
