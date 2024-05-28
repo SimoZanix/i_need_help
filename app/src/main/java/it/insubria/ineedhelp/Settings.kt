@@ -37,7 +37,7 @@ class Settings : Fragment() {
     }
 
     @SuppressLint("MissingInflatedId")
-    override fun onCreateView(
+    override fun onCreateView(//aggiunta di un meessaggio SOS personalizzato dall'utente, nel caso l'utente cliccasse per sbaglio il tasto di aggiunta senza aver inserito un messaggio viene inviato un messaggio di default SOS e mostra anche le coordinate dove si possono condividere tra le app
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
