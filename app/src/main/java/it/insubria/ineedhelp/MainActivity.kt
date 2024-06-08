@@ -79,8 +79,6 @@ class MainActivity : AppCompatActivity() {
                 val latitude = location?.latitude.toString()
                 val longitude = location?.longitude.toString()
                 var coordinataEsiste = db.getCoordinatesCount()
-                // Inserisci la tua logica per gestire la posizione aggiornata
-                // (ad esempio, aggiornare il database o mostrare la posizione su una mappa)
                 if(coordinataEsiste){
                     var aggiornato = db.aggiornaCoordinata("1", latitude.toString(), longitude.toString())
                     if(aggiornato){
