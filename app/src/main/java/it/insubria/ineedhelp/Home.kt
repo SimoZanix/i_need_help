@@ -44,11 +44,19 @@ class Home : Fragment() {
     private var latitude: String? = null
     private var longitude: String? = null
     private val uiHandler = Handler(Looper.getMainLooper())
+    private var flag = false
+    private val forMax = 9
     private var ThreadSMS = Thread{
-        while (!Thread.currentThread().isInterrupted){
+        while (!Thread.currentThread().isInterrupted && !flag){
             try {
-                for (i in 0..9){
+                for (i in 0..forMax){
                     sendSMS()
+                    if (i == forMax){
+                        uiHandler.post {
+                            Toast.makeText(requireContext(), "all messages were sent successfully", Toast.LENGTH_SHORT).show()
+                        }
+                        flag = true
+                    }
                     Thread.sleep(10000)
                 }
             }catch (e: InterruptedException){
