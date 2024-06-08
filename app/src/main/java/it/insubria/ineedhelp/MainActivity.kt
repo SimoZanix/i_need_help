@@ -74,8 +74,6 @@ class MainActivity : AppCompatActivity() {
                 super.onLocationResult(locationResult)
                 // Recupera l'ultima posizione dall'oggetto LocationResult
                 val location = locationResult.lastLocation
-
-                // Puoi accedere alle coordinate della posizione come prima:
                 val latitude = location?.latitude.toString()
                 val longitude = location?.longitude.toString()
                 var coordinataEsiste = db.getCoordinatesCount()
